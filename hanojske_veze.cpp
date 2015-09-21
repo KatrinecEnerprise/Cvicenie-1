@@ -1,15 +1,15 @@
 #include <iostream.h>
 #include <conio.h>
 
-void hanoi(int a,char from,char aux,char to){
+void tower(int a,char from,char aux,char to){
     if(a==1){
        cout<<"\t\tPresun disk 1 z "<<from<<" do "<<to<<"\n";
        return;
     }
     else{
-       hanoi(a-1,from,to,aux);
+       tower(a-1,from,to,aux);
        cout<<"\t\tPresun disk "<<a<<" z "<<from<<" do "<<to<<"\n";
-       hanoi(a-1,aux,from,to);
+       tower(a-1,aux,from,to);
     }
 }
 
