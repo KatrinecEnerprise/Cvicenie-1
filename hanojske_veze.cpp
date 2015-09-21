@@ -1,15 +1,15 @@
 #include <iostream.h>
 #include <conio.h>
 
-void tower(int a,char from,char aux,char to){
+void veza(int a,char from,char aux,char to){
     if(a==1){
        cout<<"\t\tPresun disk 1 z "<<from<<" do "<<to<<"\n";
        return;
     }
     else{
-       tower(a-1,from,to,aux);
+       veza(a-1,from,to,aux);
        cout<<"\t\tPresun disk "<<a<<" z "<<from<<" do "<<to<<"\n";
-       tower(a-1,aux,from,to);
+       veza(a-1,aux,from,to);
     }
 }
 
@@ -20,6 +20,6 @@ void main(){
      cout<<"\t\tVloz poet diskov : ";
      cin>>n;
      cout<<"\n\n";
-     tower(n,'A','B','C');
+     veza(n,'A','B','C');
      getch();
 }
